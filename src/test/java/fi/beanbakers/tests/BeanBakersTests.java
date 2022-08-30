@@ -1,7 +1,7 @@
 package fi.beanbakers.tests;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.junit.Assert;
@@ -31,8 +31,13 @@ public class BeanBakersTests {
 	 * @return provided list reversed
 	 */
 	private <T> List<T> doReverseList(List<T> input) {
-		// TODO: Write code!
-		return Collections.emptyList();
+		List<T> reversed = new ArrayList<>();
+
+		for (int i = input.size() - 1; i >= 0; i--) {
+			reversed.add(input.get(i));
+		}
+
+		return reversed;
 	}
 
 	@Test
