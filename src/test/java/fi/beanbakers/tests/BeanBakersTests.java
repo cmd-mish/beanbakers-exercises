@@ -56,8 +56,15 @@ public class BeanBakersTests {
 	 * @return int array containing the calculated fibonacci sequence
 	 */
 	private int[] doFibonacciSequence(int sequenceLength) {
-		// TODO: Write code!
-		return new int[0];
+		int[] sequence = new int[sequenceLength];
+		sequence[0] = 1;
+		sequence[1] = 1;
+
+		for (int i = 2; i < sequenceLength; i++) {
+			sequence[i] = sequence[i - 1] + sequence[i - 2];
+		}
+
+		return sequence;
 	}
 
 	@Test
